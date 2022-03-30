@@ -40,9 +40,10 @@ function start() {
 	
 	moveBackground();
   movePlayer();
-  moveEnemy1();
-	
-	} 
+  moveEnemy1();	
+  moveEnemy2();
+  moveFriend()
+	}  
 
 //function to move the game background
 	
@@ -59,8 +60,8 @@ function start() {
       var top = parseInt($("#player").css("top"));
       if(top >= 10){
         $("#player").css("top",top-10);
-      }
-   }
+        }
+    }
     
     if (game.pressed[KEY.S]) {      
       var top = parseInt($("#player").css("top"));
@@ -72,8 +73,7 @@ function start() {
     if (game.pressed[KEY.D]) {
       
       //shot function	
-    }
-  
+      }  
     } 
 
   function moveEnemy1() {
@@ -89,3 +89,20 @@ function start() {
           
         }
     } 
+
+    function moveEnemy2(){
+      positionX = parseInt($("#enemy2").css("left"));
+      $("#enemy2").css("left", positionX-3)
+        if(positionX <= 0){
+          $("#enemy2").css("left", 775)
+        }
+    }
+
+    function moveFriend(){
+      positionX = parseInt($("#friend").css("left"));
+      $("#friend").css("left", positionX+1)
+        if(positionX >= 906){
+          $("#friend").css("left", 0)
+        }
+    }
+    
