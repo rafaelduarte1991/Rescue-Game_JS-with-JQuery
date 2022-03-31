@@ -13,7 +13,6 @@ body {
 	background-image:url(../imgs/background.jpg);
 }
 
-
 #container{
 	width:950px;
 	height:auto;
@@ -78,8 +77,70 @@ body {
 	padding:10px;
 }
 
+#shot {
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url(../imgs/shot.png);
+}
+
+#explosion1 {
+	width:15px;
+	height:87px;
+	position:absolute;
+
+}
+
+#explosion2 {
+	width:15px;
+	height:87px;
+	position:absolute;	
+}
+
+#explosion3 {
+	width:44px;
+	height:51px;
+	position:absolute;
+}
+
+.anima4 {
+	width:44px;
+	height:51px;
+	background-image:url(../imgs/friend_death.png);
+	animation:play3 .5s steps(7) infinite;
+	-webkit-animation: play3 .5s steps(7) infinite;
+       -moz-animation: play3 .5s steps(7) infinite;
+        -ms-animation: play3 .5s steps(7) infinite;
+         -o-animation: play3 .5s steps(7) infinite;
+}
+
+@keyframes play3 {
+	from {background-position:0px;}
+	to {background-position:-308px;}
+}
+
+@-webkit-keyframes play3 {
+   from { background-position:    0px; }
+     to { background-position: -308px; }
+}
+
+@-moz-keyframes play3 {
+   from { background-position:    0px; }
+     to { background-position: -308px; }
+}
+
+@-ms-keyframes play3 {
+   from { background-position:    0px; }
+     to { background-position: -308px; }
+}
+
+@-o-keyframes play3 {
+   from { background-position:    0px; }
+     to { background-position: -308px; }
+}
+
 .anima1 {
-	background-image:url(../imgs/helicoptero.png);
+	background-image:url(../imgs/apache.png);
 	animation:play .5s steps(2) infinite;
 
        -webkit-animation: play .5s steps(2) infinite;
