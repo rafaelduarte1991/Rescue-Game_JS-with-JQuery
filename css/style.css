@@ -2,25 +2,31 @@
 	font-family:Title;
 	src:url(../font/ANODETONOONE.TTF);
 }
-
+body {
+	background-image:url(../imgs/background.jpg);
+}
 h1 {
 	font-family:Title;
 	font-size:40px;
 	color:#603A03;
 }
-
-body {
-	background-image:url(../imgs/background.jpg);
+h2 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#FFF
 }
-
+h3 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#603A03;
+}
 #container{
 	width:950px;
 	height:auto;
 	position:relative;
-	margin-left:auto; /* centraliza */
-	margin-right:auto; /* centraliza */
+	margin-left:auto; /* center_align */
+	margin-right:auto; /* center_align */
 }
-
 #gameBackground {
 	width:950px;
 	height:630px;
@@ -28,7 +34,6 @@ body {
 	border-color:#FFF;
 	border-style:solid;
 }
-
 #player {
 	width:256px;
 	height:66px;
@@ -37,7 +42,6 @@ body {
 	top:179px;
   background-image:url(../imgs/apache.png);
 }
-
 #enemy1 {
 	width: 256px;
 	height: 66px;
@@ -45,9 +49,7 @@ body {
 	left: 689px;
 	top: 253px;
 	background-image:url(../imgs/enemy1.png);
-	
 }
-
 #enemy2 {
 	width: 165px;
 	height: 70px;
@@ -56,7 +58,6 @@ body {
 	top: 447px;
 	background-image: url(../imgs/enemy2.png);
 }
-
 #friend {
 	width: 44px;
 	height: 51px;
@@ -65,7 +66,6 @@ body {
 	top: 464px;
 	background-image:url(../imgs/friend.png);
 }
-
 #start {
 	width:350px;
 	height:200px;
@@ -76,33 +76,78 @@ body {
 	text-align:center;
 	padding:10px;
 }
-
 #shot {
 	width: 50px;
 	height: 8px;
 	position: absolute;
 	background-image: url(../imgs/shot.png);
 }
-
 #explosion1 {
 	width:15px;
 	height:87px;
 	position:absolute;
-
 }
-
 #explosion2 {
 	width:15px;
 	height:87px;
 	position:absolute;	
 }
-
 #explosion3 {
 	width:44px;
 	height:51px;
 	position:absolute;
 }
+#scoreboard {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 5px;
+	top: 590px;
+}
+#life {
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	left: 750px;
+	top: 7px;	
+}
+#gameover {
+	width:350px;
+	height:200px;
+	background-color:#FFF;
+ 	margin-left:auto;
+  margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
+}
+.anima1 {
+	background-image:url(../imgs/apache.png);
+	animation:play .5s steps(2) infinite;
 
+       -webkit-animation: play .5s steps(2) infinite;
+       -moz-animation: play .5s steps(2) infinite;
+       -ms-animation: play .5s steps(2) infinite;
+       -o-animation: play .5s steps(2) infinite;
+}
+.anima2 {
+  background-image:url(../imgs/enemy1.png);
+  animation: play .5s steps(2) infinite;
+  
+  -webkit-animation: play .5s steps(2) infinite;
+  -moz-animation: play .5s steps(2) infinite;
+  -ms-animation: play .5s steps(2) infinite;
+  -o-animation: play .5s steps(2) infinite; 
+}
+.anima3 {
+	background-image:url(../imgs/friend.png);
+	animation:play2 .9s steps(12) infinite;
+	
+  -webkit-animation: play2 .9s steps(12) infinite;
+       -moz-animation: play2 .9s steps(12) infinite;
+        -ms-animation: play2 .9s steps(12) infinite;
+         -o-animation: play2 .9s steps(12) infinite;
+}
 .anima4 {
 	width:44px;
 	height:51px;
@@ -112,6 +157,48 @@ body {
        -moz-animation: play3 .5s steps(7) infinite;
         -ms-animation: play3 .5s steps(7) infinite;
          -o-animation: play3 .5s steps(7) infinite;
+}
+
+@keyframes play {
+	from {background-position:0px;}
+	to {background-position:-512px;}
+}
+@-webkit-keyframes play {
+   from { background-position:0px; }
+     to { background-position: -512px; }
+}
+@-moz-keyframes play {
+   from { background-position:0px; }
+     to { background-position: -512px; }
+}
+@-ms-keyframes play {
+   from { background-position:0px; }
+     to { background-position: -512px; }
+}
+@-o-keyframes play {
+   from { background-position:0px; }
+     to { background-position: -512px; }
+}
+
+@keyframes play2 {
+	from {background-position:0px;}
+	to {background-position:-528px;}
+}
+@-webkit-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+@-moz-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+@-ms-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+@-o-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
 }
 
 @keyframes play3 {
@@ -138,87 +225,3 @@ body {
    from { background-position:    0px; }
      to { background-position: -308px; }
 }
-
-.anima1 {
-	background-image:url(../imgs/apache.png);
-	animation:play .5s steps(2) infinite;
-
-       -webkit-animation: play .5s steps(2) infinite;
-       -moz-animation: play .5s steps(2) infinite;
-       -ms-animation: play .5s steps(2) infinite;
-       -o-animation: play .5s steps(2) infinite;
-}
-
-@keyframes play {
-	from {background-position:0px;}
-	to {background-position:-512px;}
-}
-
-
-@-webkit-keyframes play {
-   from { background-position:0px; }
-     to { background-position: -512px; }
-}
-
-@-moz-keyframes play {
-   from { background-position:0px; }
-     to { background-position: -512px; }
-}
-
-@-ms-keyframes play {
-   from { background-position:0px; }
-     to { background-position: -512px; }
-}
-
-@-o-keyframes play {
-   from { background-position:0px; }
-     to { background-position: -512px; }
-}
-
-.anima2 {
-    background-image:url(../imgs/enemy1.png);
-    animation: play .5s steps(2) infinite;
-    
-    -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite; 
-}
-
-.anima3 {
-	background-image:url(../imgs/friend.png);
-	animation:play2 .9s steps(12) infinite;
-	
-  -webkit-animation: play2 .9s steps(12) infinite;
-       -moz-animation: play2 .9s steps(12) infinite;
-        -ms-animation: play2 .9s steps(12) infinite;
-         -o-animation: play2 .9s steps(12) infinite;
-}
-
-@keyframes play2 {
-	from {background-position:0px;}
-	to {background-position:-528px;}
-}
-
-@-webkit-keyframes play2 {
-   from { background-position:    0px; }
-     to { background-position: -528px; }
-}
-
-@-moz-keyframes play2 {
-   from { background-position:    0px; }
-     to { background-position: -528px; }
-}
-
-@-ms-keyframes play2 {
-   from { background-position:    0px; }
-     to { background-position: -528px; }
-}
-
-@-o-keyframes play2 {
-   from { background-position:    0px; }
-     to { background-position: -528px; }
-}
-
-
-
